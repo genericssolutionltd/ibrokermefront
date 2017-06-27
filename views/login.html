@@ -1,0 +1,78 @@
+﻿<div class="center-vertical" ng-keypress="keypressed($event)" style="margin-top:200px">
+    <div class="center-content row">
+        <div class="col-md-8 col-lg-6 clearfix center-margin">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="../../assets/image-resources/iBrokerMe_Logo.png" alt="iBrokerMe" align="middle">
+                    <!--<h3 class="text-transform-upr font-size-17">Monarch Admin <span class="opacity-80">v1.0</span></h3>
+                    <p class="font-gray">Lorem ipsum dolor sic amet dixit tu lorem ipsum.</p>-->
+                    <div class="divider"></div>
+                    <ul class="reset-ul">
+                        <li class="pad10A font-size-16">
+                            <i class="glyph-icon icon-dashboard mrg10R font-green"></i>
+                            View with your customisable dashboard
+                        </li>
+                        <li class="pad10A font-size-16">
+                            <i class="glyph-icon icon-briefcase mrg10R font-orange"></i>
+                            Secure all your important documents in your iDocumentMe repository
+                        </li>
+                        <li class="pad10A font-size-16">
+                            <i class="glyph-icon icon-facebook-square mrg10R font-blue"></i>
+                            Share content on multiple Social platforms with iShareMe
+                        </li>
+                        <li class="pad10A font-size-16">
+                            <i class="glyph-icon icon-lock mrg10R font-red"></i>
+                            Store all your Passwords in a secured location & share with friends or family with iSecureMe
+                        </li>
+                    </ul>
+                    <div class="divider"></div>
+                    <div><label style="color:red">{{message}}</label></div>
+                    <br />
+                </div>
+                <div class="col-md-7">
+                    <form method="post" action="">
+                        <div class="content-box">
+                            <h3 class="content-box-header content-box-header-alt bg-default">
+                                <span class="icon-separator">
+                                    <i class="glyph-icon icon-cog"></i>
+                                </span>
+                                <span class="header-wrapper">
+                                    Members area
+                                    <small>Login to your account.</small>
+                                </span>
+                                <span class="header-buttons">
+                                    <a href="#registration" class="btn btn-sm btn-primary" title="">Sign Up</a>
+                                </span>
+                            </h3>
+                            <div class="content-box-wrapper">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" ng-model="useremail" placeholder="Enter email">
+                                        <span class="input-group-addon bg-blue">
+                                            <i class="glyph-icon icon-envelope-o"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" ng-model="userpassword" placeholder="Password">
+                                        <span class="input-group-addon bg-blue">
+                                            <i class="glyph-icon icon-unlock-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <a href="#recovery" title="Recover password">Forgot Your Password?</a>
+                                </div>
+                                <input type="button" class="btn btn-success"  ng-click="processsignin()" value="Sign In" />
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div align="center">Not a member yet? <a href="#registration" title="Register">Click here to sign up</a>!</div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

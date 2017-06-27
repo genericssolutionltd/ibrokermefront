@@ -1,0 +1,25 @@
+{
+  "name": "ibrokerme",
+  "version": "1.0.0",
+  "description": "loading dependencies",
+  "main": "app.js",
+  "dependencies": {
+    "angularjs": "1.6.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrokerme/iBrokerMeWeb.git"
+  },
+  "author": "Anthony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibrokerme/iBrokerMeWeb/issues"
+  },
+  "homepage": "https://github.com/ibrokerme/iBrokerMeWeb#readme"
+}

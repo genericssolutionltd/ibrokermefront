@@ -1,0 +1,89 @@
+﻿<div class="center-vertical">
+    <div class="center-content row">
+        <div class="col-md-10 center-margin">
+            <h3 class="text-center pad15B font-gray text-transform-upr font-size-23"><a href="http:\\www.ibrokerme.com" target="_blank"><img src="../../assets/image-resources/iBrokerMe_Logo.png" alt="iBrokerMe" align="middle"></a> </h3>
+            <div class="panel">
+                <div class="panel-body">
+                    <div><label style="color:red">{{message}}</label></div>
+                    <br />
+                    <h3 class="title-hero">
+                        Registration form
+                    </h3>
+                    <div class="example-box-wrapper">
+                        <form class="form-horizontal bordered-row" id="ibm_reg-form" data-parsley-validate="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Username</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" placeholder="Required Field" ng-model="username" required class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Email</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" data-parsley-type="email" ng-model="email" placeholder="Email address" required class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Gender</label>
+                                        <div class="col-sm-6">
+                                            <select name="" required class="form-control" ng-model="gender">
+                                                <option> </option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="example-box-wrapper">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Date of Birth</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-prepend input-group">
+                                                    <span class="add-on input-group-addon">
+                                                        <i class="glyph-icon icon-calendar"></i>
+                                                    </span>
+                                                    <input type="text" class="bootstrap-datepicker form-control" value="01/01/90" data-date-format="mm/dd/yy" ng-model="dateofbirth">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" id="ps1" placeholder="At least 8 characters" required class="form-control" ng-model="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Repeat Password</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" data-parsley-equalto="#ps1" placeholder="At least 8 characters" required class="form-control" ng-model="confirmpassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Checkbox</label>
+                                        <div class="col-sm-6">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" required name="terms" ng-model="termsaccepted">
+                                                    Accept Terms &amp; Conditions
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-default content-box text-center pad20A mrg25T">
+                <button ng-click="addregistration()" class="btn btn-lg btn-primary">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

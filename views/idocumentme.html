@@ -1,0 +1,138 @@
+﻿<!--Start of Chat sidebar -->
+<div id="sb-site">
+    <div ng-include="'/views/partial-views/chat-bar.html'"></div>
+    <div id="page-wrapper">
+        <div ng-include="'/views/partial-views/menus.html'"></div>
+        <div ng-include="'/views/partial-views/sidebar-menus.html'"></div>
+
+        <div id="page-content-wrapper">
+            <div id="page-content">
+                <div class="container">
+                    <section ng-show="viewing">
+                        <div ng-include="'/views/partial-views/docview.html'"></div>
+                         <b style="color:red">{{message}}</b>
+                    </section>
+                    <section ng-hide="viewing">
+                        <div id="page-title">
+                            <h3 class="text-left pad15B font-gray text-transform-upr font-size-23"><a href="#"><img src="../../assets/image-resources/iDocumentme_screen.png" alt="iDashboard" align="middle"></a></h3>
+                            <p>
+                                Designed for your convenience and to enhance your user experience. At a glance view all your uploaded important documents that you may access and share anytime with  <font color="#76A300">i</font>Document<font color="#76A300">Me</font></font> account.
+                            </p>
+
+                        </div>
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h3 class="title-hero">
+                                    Document Upload
+                                </h3>
+                                <label class="col-sm-3 control-label">Please select document type</label>
+                                <div class="col-sm-1">
+                                    <select ng-model="documenttype" class="chosen-select">
+                                        <optgroup label="Certificates">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+
+                                        </optgroup>
+                                        <optgroup label="Insurances">
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+
+                                        </optgroup>
+                                        <optgroup label="Financial">
+                                            <option>Option 5</option>
+                                            <option>Option 6</option>
+
+                                        </optgroup>
+                                        <optgroup label="Educational">
+                                            <option>Option 7</option>
+                                            <option>Option 8</option>
+
+                                        </optgroup>
+                                    </select>
+                                </div><br /><br /><br />
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" ng-model="otherdocument" placeholder="Other document type">
+                                </div><br /><br /><br />
+
+                                <div class="example-box-wrapper">
+                                    <form id="fileupload">
+                                        <div class="row fileupload-buttonbar">
+                                            <div class="col-lg-6">
+                                                <div class="float-left">
+                                                    <span class="btn btn-md btn-success fileinput-button">
+                                                        <i class="glyph-icon icon-plus"></i>
+                                                        Add files...
+                                                        <input type="file" file-model="documentfile" />
+                                                    </span>
+                                                    <button ng-click="uploaddocument()" type="submit" class="btn btn-md btn-default start">
+                                                        <i class="glyph-icon icon-upload"></i>
+                                                        Start upload
+                                                    </button>
+                                                    <button ng-click="canceldocument()" type="reset" class="btn btn-md btn-warning cancel">
+                                                        <i class="glyph-icon icon-ban"></i>
+                                                        Cancel upload
+                                                    </button>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                        <div class="row fileupload-buttonbar">
+                                            <input type="checkbox" ng-model="termsandconditions" class="toggle width-reset float-left" name="terms" />
+                                            <a href="terms" target="_blank">Accept Terms &amp; conditions</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h3 class="title-hero">
+                                    Document view
+                                </h3>
+                                <div class="example-box-wrapper">
+                                    <table id="datatable-row-highlight" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Document Name</th>
+                                                <th>Ducment Type</th>
+                                                <th>Date Added</th>
+                                                <th>What would you like to do?</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Document Name</th>
+                                                <th>Ducment Type</th>
+                                                <th>Date Added</th>
+                                                <th>What would you like to do?</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr ng-repeat="model in documents">
+                                                <td>{{$index + 1}}.{{model.filename}}</td>
+                                                <td>{{model.description}}</td>
+                                                <td>{{model.dateadded}}</td>
+                                                <td>
+                                                    <button ng-click="processdocument(model.documentid,'download')" class="btn btn-border btn-alt border-green btn-link font-default">Download</button>
+                                                    <button ng-click="processdocument(model.documentid,'view')" class="btn btn-border btn-alt border-blue font-default">View</button>
+                                                    <button ng-click="processdocument(model.documentid,'email')" class="btn btn-border btn-alt border-yellow btn-link font-default">Email</button>
+                                                    <button ng-click="processdocument(model.documentid,'extract')" class="btn btn-border btn-alt border-black btn-link font-default">Extract</button>
+                                                    <button ng-click="processdocument(model.documentid,'delete')" class="btn btn-border btn-alt border-red btn-link font-default">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

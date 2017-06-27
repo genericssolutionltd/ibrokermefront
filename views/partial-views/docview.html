@@ -1,0 +1,16 @@
+﻿<div>
+    <button ng-click="closeview()" class="btn btn-border btn-alt border-green btn-link font-default">Close</button>
+</div>
+<a ng-click="getPdf()">Show PDF</a>
+<div ng-if="isimage">
+    <div class="fileinput-preview thumbnail">
+        <img src='data:image/jpeg;base64,{{documentmage}}' />
+    </div>
+</div>
+<div ng-if="!isimage">
+    <p ng-bind-html="documentmage"></p>
+</div>
+
+<div>
+    <button ng-click="closeview()" class="btn btn-border btn-alt border-green btn-link font-default">Close</button>
+</div>

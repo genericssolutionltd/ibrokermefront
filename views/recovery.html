@@ -1,0 +1,43 @@
+﻿<div class="center-vertical">
+    <div class="center-content row">
+        <div class="col-md-10 center-margin">
+            <h3 class="text-center pad15B font-gray text-transform-upr font-size-23"><a href="http:\\www.ibrokerme.com" target="_blank"><img src="../../assets/image-resources/iBrokerMe_Logo.png" alt="iBrokerMe" align="middle"></a> </h3>
+            <div class="panel">
+                
+                <div class="panel-body">
+                    <div><label style="color:red">{{message}}</label></div>
+                    <br />
+                    <h3 class="title-hero">
+                        password recovery
+                    </h3>
+                    <div class="example-box-wrapper">
+                        <form class="form-horizontal bordered-row" id="ibm_recovery-form" data-parsley-validate="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Enter Email</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control popover-button-default" data-content="Password will be reset and sent to your email address." ng-model="useremail" data-trigger="focus" data-placement="top">
+                                        </div>
+                                    </div>
+                                    <div align="center"><h4><b>or</b></h4></div><br />
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Enter Username</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control popover-button-default" placeholder="" data-content="Password will be reset and sent to your email address." ng-model="username" data-trigger="focus" data-placement="top">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-default content-box text-center pad20A mrg25T">
+                <button ng-click="passwordrecovery()" class="btn btn-lg btn-primary">Recover</button>
+            </div>
+
+        </div>
+    </div>
+</div>
